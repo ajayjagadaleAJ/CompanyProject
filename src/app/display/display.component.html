@@ -1,0 +1,23 @@
+<table border="1px" class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Pass</th>
+        <th>Confirm-pass</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let x of ck">
+        <td>{{x.cid}}</td>
+        <td>{{x.cname}}</td>
+        <td>{{x.cemail}}</td>
+        <td>{{x.cpass}}</td>
+        <td>{{x.ccpass}}</td>
+        <td>
+            <button class="btn-outline-danger" (click)="del(x.cid)">Delete</button> |
+            <button class="btn-outline-primary" (click)="edit(x.cid)">Edit</button>
+        </td>
+        
+
+    </tr>
+</table>
